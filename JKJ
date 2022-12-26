@@ -1,0 +1,28 @@
+The Foo module is a demonstration of script modules.
+ * It contains a foo function that returns a greeting string.
+ * It also contains a bar object representing the current date.
+ * @module Modules/FooModule
+ */
+
+/**
+ * Returns a greeting string.
+ * @param {ee.String} arg The name to which the greeting should be addressed
+ * @return {ee.String} The complete greeting.
+ */
+exports.foo = function(arg) {
+  return 'Hello, ' + arg + '!  And a good day to you!';
+};
+
+/**
+ * An ee.Date object containing the time at which the object was created.
+ */
+exports.bar = ee.Date(Date.now());
+var Foo = require('users/username/default:Modules/FooModule.js');
+
+print(Foo.doc);
+
+print(Foo.foo('world'));
+
+print('Time now:', Foo.bar);
+https://code.earthengine.google.com/5695887aad76979388a723a85339fbf2#debug=false;
+ filter(), clip(), and Map.addLayer().
